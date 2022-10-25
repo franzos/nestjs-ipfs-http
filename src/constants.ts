@@ -1,0 +1,2 @@
+export const IPFS_HTTP_MODULE_OPTIONS = Symbol("IPFS_HTTP_MODULE_OPTIONS");
+export const CLIENT_OPTIONS = Symbol("CLIENT_OPTIONS");

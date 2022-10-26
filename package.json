@@ -6,7 +6,7 @@
         "prebuild": "rimraf dist",
         "tsc": "npm run build",
         "build": "npm run prebuild && tsc",
-        "publish": "npm run build && npm run publish",
+        "publish": "npm run build && npm publish",
         "test": "npx jest --config ./test/jest-e2e.json --runInBand"
     },
     "author": "Franz Geffke <franz@pantherx.org>",

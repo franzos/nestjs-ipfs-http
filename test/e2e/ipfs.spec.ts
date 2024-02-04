@@ -17,7 +17,7 @@ describe('General tests', () => {
     it('Should appear as online', async () => {
         const ipfsHttpService = app.get(IpfsHttpService)
         console.log(ipfsHttpService)
-        const isOnline = await ipfsHttpService.client.isOnline()
+        const isOnline = ipfsHttpService.client.isOnline()
         expect(isOnline).toBe(true)
     })
 })

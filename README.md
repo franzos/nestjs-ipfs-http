@@ -1,13 +1,11 @@
 # IPFS HTTP module for Nest framework (Nestjs)
 
-This package provides `ipfs-http-client` as a NestJS Module.
-
-The client is currently locked at `"ipfs-http-client": "^52.0.5"` for Node.js v14 support.
+This package provides `kubo-rpc-client` as a NestJS Module.
 
 ## Installation
 
 ```bash
-npm install nestjs-ipfs-http
+pnpm install nestjs-ipfs-http
 ```
 
 ## Usage

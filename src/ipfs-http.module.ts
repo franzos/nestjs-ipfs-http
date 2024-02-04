@@ -27,7 +27,7 @@ export class IpfsHttpModule extends createConfigurableDynamicRootModule<IpfsHttp
     }
 
     async onModuleInit() {
-        const isOnline = await this.service.client.isOnline()
+        const isOnline = this.service.client.isOnline()
         this.logger.log(`IPFS Http Client is online: ${isOnline}.`)
     }
 }

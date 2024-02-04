@@ -1,4 +1,4 @@
-import { Options } from 'ipfs-http-client'
+import { Options } from 'kubo-rpc-client'
 
 export interface IpfsHttpModuleOptions {
     client?: Options

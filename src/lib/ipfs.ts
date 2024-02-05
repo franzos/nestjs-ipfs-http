@@ -19,7 +19,7 @@ export class IPFSHTTPClient {
         return `${this.options.protocol}://${this.options.host}:${this.options.port}${path}`
     }
 
-    async add(file: Buffer, params: AddFileParams): Promise<AddFileResponse> {
+    async add(file: Buffer | string, params?: AddFileParams): Promise<AddFileResponse> {
         const url = this.makeUrl('/api/v0/add')
         const formData = new FormDataNode()
         formData.append('file', file)

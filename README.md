@@ -55,6 +55,8 @@ const isOnline = await ipfsHttpService.client.isOnline()
 console.log(isOnline) // true
 ```
 
+Refer to `test/e2e/ipfs.spec.ts` for more examples.
+
 ## Test
 
 ```bash

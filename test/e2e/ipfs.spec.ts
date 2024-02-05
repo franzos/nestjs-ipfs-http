@@ -47,4 +47,23 @@ describe('General tests', () => {
         const str = new TextDecoder().decode(new Uint8Array(downloadRes))
         expect(str).toBe('Hi there')
     })
+
+    it('Should (upload &) download file successfully: JSON', async () => {
+        const data = await fs.readFile('test.txt')
+        const file = Buffer.from(data)
+
+        const uploadRes = await ipfsHttpService.addJson({
+            id: 'abc',
+        })
+        const downloadRes = await ipfsHttpService.getJson({ arg: uploadRes.Hash })
+
+        expect(downloadRes).toStrictEqual({
+            id: 'abc',
+        })
+        const downloadResUri = await ipfsHttpService.getJsonFromUri(`ipfs://${uploadRes.Hash}`)
+
+        expect(downloadResUri).toStrictEqual({
+            id: 'abc',
+        })
+    })
 })

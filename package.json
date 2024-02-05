@@ -1,6 +1,6 @@
 {
     "name": "nestjs-ipfs-http",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "description": "IPFS HTTP-API Module",
     "scripts": {
         "prebuild": "rimraf dist",
@@ -12,7 +12,6 @@
     "license": "MIT",
     "dependencies": {
         "@golevelup/nestjs-modules": "^0.6.1",
-        "@helia/interface": "^4.0.0",
         "@nestjs/common": "^9.1.6",
         "@nestjs/core": "^9.1.6",
         "@nestjs/platform-express": "^9.1.6",

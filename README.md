@@ -1,8 +1,20 @@
-# IPFS HTTP module for Nest framework (Nestjs)
+# IPFS HTTP module for Nest framework (NestJS)
 
-This package provides `kubo-rpc-client` as a NestJS Module.
+This package provides a IPFS client as a NestJS Module.
+
+Because the previous IPFS HTTP module has been depreciated, and the replacement `kubo-rpc-client` is utter madness to work with in CommonJS (`kubo-rpc-client` is a ESM library, which relies on `ipfs-utils` which is a CommonJS library), I decided to manually implement the important endpoints.
+
+That being said, truly ... fu** this ESM/CJS shit. Fu** it.
+
+Here's what's supported:
+- add
+- get
+- cat
+- stats/dht
 
 ## Installation
+
+- `v0.2.0` is using NestJS 9 for legac reasons.
 
 ```bash
 pnpm install nestjs-ipfs-http
@@ -36,11 +48,15 @@ ipfs daemon
 export class AppModule {}
 ```
 
-For all client options refer to [ipfs-http-client#createoptions](https://www.npmjs.com/package/ipfs-http-client#createoptions)
-
 ### Use
 
 ```js
 const isOnline = await ipfsHttpService.client.isOnline()
 console.log(isOnline) // true
+```
+
+## Test
+
+```bash
+pnpm run test
 ```

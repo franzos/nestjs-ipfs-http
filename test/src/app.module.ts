@@ -3,7 +3,7 @@ import { IpfsHttpModule } from '../../src/ipfs-http.module'
 
 @Module({
     imports: [
-        IpfsHttpModule.forRootAsync(IpfsHttpModule, {
+        IpfsHttpModule.registerAsync({
             useFactory: () => {
                 return {
                     client: {

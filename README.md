@@ -14,7 +14,7 @@ Here's what's supported:
 
 ## Installation
 
-- `v0.2.0` is using NestJS 9 for legac reasons.
+- `v0.2.0` is using NestJS 9 for legacy reasons.
 
 ```bash
 pnpm install nestjs-ipfs-http
@@ -33,7 +33,7 @@ ipfs daemon
 ```js
 @Module({
     imports: [
-        IpfsHttpModule.forRootAsync(IpfsHttpModule, {
+        IpfsHttpModule.registerAsync({
             useFactory: () => {
                 return {
                     client: {

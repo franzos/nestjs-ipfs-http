@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+  #
+  # IPFS Gateway
+  #
+
+  ipfs_gateway:
+    container_name: ipfs_gateway
+    image: ipfs/kubo:latest
+    volumes:
+      - .data/ipfs:/data/ipfs
+    ports:
+      - "5001:5001"

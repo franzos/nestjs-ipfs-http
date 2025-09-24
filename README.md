@@ -4,8 +4,6 @@ This package provides a IPFS client as a NestJS Module.
 
 Because the previous IPFS HTTP module has been depreciated, and the replacement `kubo-rpc-client` is utter madness to work with in CommonJS (`kubo-rpc-client` is a ESM library, which relies on `ipfs-utils` which is a CommonJS library), I decided to manually implement the important endpoints.
 
-That being said, truly ... fu** this ESM/CJS shit. Fu** it.
-
 Here's what's supported:
 - add
 - get
